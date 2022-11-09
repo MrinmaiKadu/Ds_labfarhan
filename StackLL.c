@@ -14,9 +14,7 @@ void push(int val)
     
     struct node *newNode = malloc(sizeof(struct node));
     newNode->data = val;
-
     newNode->next = head;
-
     head = newNode;
 }
 
@@ -24,19 +22,13 @@ void pop()
 {
   
     struct node *temp;
-
     if(head == NULL)
         printf("Stack is Empty\n");
     else
     {
         printf("Poped element = %d\n", head->data);
-
-  
         temp = head;
-
-
         head = head->next;
-
         free(temp);
     }
 }
@@ -45,8 +37,6 @@ void pop()
 void printList()
 {
     struct node *temp = head;
-
- 
     while(temp != NULL)
     {
          printf("%d->", temp->data);
